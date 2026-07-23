@@ -22,10 +22,27 @@ QCOM_PATH_PREFIXES = (
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--base", required=True, type=pathlib.Path)
-    parser.add_argument("--source", required=True, type=pathlib.Path)
+    parser.add_argument(
+        "--source",
+        required=True,
+        action="append",
+        type=pathlib.Path,
+        help="CodeLinaro manifest; repeat for referenced techpack manifests",
+    )
     parser.add_argument("--output", required=True, type=pathlib.Path)
     parser.add_argument("--include", required=True)
-    parser.add_argument("--source-tag", required=True)
+    parser.add_argument(
+        "--source-tag",
+        required=True,
+        action="append",
+        help="Source tag recorded in the generated manifest comment",
+    )
+    parser.add_argument(
+        "--path-prefix",
+        action="append",
+        default=[],
+        help="Additional project path prefix to import",
+    )
     parser.add_argument("--add-remote", action="store_true")
     return parser.parse_args()
 
@@ -47,28 +64,47 @@ def indent(element, level=0):
 
 def main():
     args = parse_args()
+    if len(args.source) != len(args.source_tag):
+        raise ValueError("--source and --source-tag must have the same count")
+
     base = ET.parse(args.base).getroot()
-    source = ET.parse(args.source).getroot()
+    sources = [ET.parse(path).getroot() for path in args.source]
     base_by_path = {
         project.get("path"): project.get("name")
         for project in base.findall("project")
     }
+    path_prefixes = (*QCOM_PATH_PREFIXES, *args.path_prefix)
 
     output = ET.Element("manifest")
-    output.append(ET.Comment(f" Generated from CodeLinaro tag {args.source_tag}. "))
+    output.append(
+        ET.Comment(
+            " Generated from CodeLinaro tags "
+            + ", ".join(args.source_tag)
+            + ". "
+        )
+    )
     ET.SubElement(output, "include", {"name": args.include})
 
     if args.add_remote:
-        remote = source.find("remote[@name='clo-la']")
+        remote = next(
+            (
+                source.find("remote[@name='clo-la']")
+                for source in sources
+                if source.find("remote[@name='clo-la']") is not None
+            ),
+            None,
+        )
         if remote is None:
-            raise RuntimeError("source manifest has no clo-la remote")
+            raise RuntimeError("source manifests have no clo-la remote")
         output.append(copy.deepcopy(remote))
 
-    projects = [
-        project
-        for project in source.findall("project")
-        if project.get("path", "").startswith(QCOM_PATH_PREFIXES)
-    ]
+    projects_by_path = {}
+    for source in sources:
+        for project in source.findall("project"):
+            path = project.get("path", "")
+            if path.startswith(path_prefixes):
+                projects_by_path[path] = project
+    projects = list(projects_by_path.values())
 
     removed = set()
     for project in projects:

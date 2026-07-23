@@ -5,7 +5,7 @@
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
   <remove-project name="android_hardware_qcom_wlan" optional="true" />
   <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="refs/heads/Klee-1.0" />
-  <project remote="clo-la" name="device/qcom/common" path="device/qcom/common" revision="7977b2d0a37d9f55df5cbf7ebd125ea9056850e0" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1">
+  <project remote="klee" name="android_device_qcom_common" path="device/qcom/common" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
   </project>
   <project remote="clo-la" name="device/qcom/sepolicy_vndr" path="device/qcom/sepolicy_vndr" revision="54a082464707deb8ce6ad26a38c43bde92e63ced" upstream="refs/heads/sepolicy.vndr.lnx.15.0.r4-rel" clone-depth="1" />

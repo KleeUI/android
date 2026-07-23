@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest>
+  <!-- Generated from CodeLinaro tag LA.QSSI.16.0.r1-12300-qssi.0. -->
+  <include name="default.xml" />
+  <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
+  <project remote="clo-la" name="device/qcom/qssi" path="device/qcom/qssi" revision="42bd6eaf0fe593a761f6dbe5d9dcd74111d38710" upstream="refs/heads/qcom-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="device/qcom/qssi_32" path="device/qcom/qssi_32" revision="3912e6dacb599c39c99af6afb7d886c83058a8bd" upstream="refs/heads/qcom-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="device/qcom/qssi_32go" path="device/qcom/qssi_32go" revision="328556e7e5a04ff65d0ad033d945e301c0cbf8c6" upstream="refs/heads/qcom-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="device/qcom/qssi_64" path="device/qcom/qssi_64" revision="40c268ebf055216bd99ef8e98cdab4e46c9213de" upstream="refs/heads/qcom-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="device/qcom/qssi_lite" path="device/qcom/qssi_lite" revision="1f959c0be673347aa340e95af5eb09841f8a0a73" upstream="refs/heads/qcom-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="device/qcom/sepolicy" path="device/qcom/sepolicy" revision="ecbcb07c7177a1c209bd4da97db23037d3b6d638" upstream="refs/heads/sepolicy-sysintf.lnx.16.0.r1-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/audio" path="vendor/qcom/opensource/commonsys/audio" revision="2c343ea4cec2a1714cfc25cf1821f57fda616c62" upstream="refs/heads/av-aosp-qc-sys.lnx.15.0.r9-rel" groups="qc-common-sys,vsdk_inc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3">
+    <linkfile dest="vendor/qcom/defs/product-defs/system/audio_system_product.mk" src="configs/qssi/audio_system_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/commonsys/bluetooth" revision="a12c106e1ed9d608c504517e63494106e9406b85" upstream="refs/heads/bt-sys.lnx.15.0.r4-rel" groups="qc-common-sys,vsdk_inc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3">
+    <linkfile dest="vendor/qcom/defs/board-defs/system/bt-system-qssi-board.mk" src="bt-system-qssi-board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/system/bt-system-opensource-product.mk" src="bt-system-opensource-product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/core-utils" path="vendor/qcom/opensource/core-utils" revision="7623f56632a8cd2ede2222c64f646e0db7b69752" upstream="refs/heads/android-core-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,cyborg,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3">
+    <linkfile dest="vendor/qcom/build/tasks/QSSI_violators.mk" src="build/QSSI_violators.mk" />
+    <linkfile dest="vendor/qcom/build/tasks/QMAA_enforcement.mk" src="build/QMAA_enforcement.mk" />
+    <linkfile dest="vendor/qcom/build/tasks/vendor_prop_context_restriction.mk" src="build/vendor_prop_context_restriction.mk" />
+    <linkfile dest="vendor/qcom/build/tasks/generate_vendor_bundle.mk" src="image_generation_tool/generate_vendor_bundle.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/image_generation_tool_product.mk" src="image_generation_tool/config/image_generation_tool_product.mk" />
+    <linkfile dest="build.sh" src="build/build.sh" />
+    <linkfile dest="kernel/Android.mk" src="build/stop_scan.mk" />
+    <linkfile dest="disregard/Android.mk" src="build/stop_scan.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/core-utils-sys" path="vendor/qcom/opensource/core-utils-sys" revision="a9e7ef915df0b3415a1c94cc39d358477aadfbf3" upstream="refs/heads/android-core-sys.lnx.16.0.r2-rel" groups="qc-common-sys,vsdk_exc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/crosvm-gunyah" path="vendor/qcom/opensource/crosvm-gunyah" revision="8b04c74e0a6db4fddff92e5ba32c92162afc1d83" upstream="refs/heads/android-core-sys.lnx.16.0.r2-rel" groups="qc-common-sys,vsdk_inc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/cryptfs_hw" path="vendor/qcom/opensource/commonsys/cryptfs_hw" revision="f9ddb744de137f8acfb5807e24c095c79c67f910" upstream="refs/heads/qcom-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys,vsdk_inc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/dataservices-commonsys" path="vendor/qcom/opensource/commonsys/dataservices" revision="0cb1df40dc3aa65b5f19b904c91924dd1892e524" upstream="refs/heads/data-sys.lnx.16.0.r1-rel" groups="qc-common-sys,vsdk_exc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/display-commonsys" path="vendor/qcom/opensource/commonsys/display" revision="20838a1935bedffef03e143417214f45514c06af" upstream="refs/heads/display-sys.lnx.15.0.r11-rel" groups="qc-common-sys,vsdk_exc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3">
+    <linkfile dest="vendor/qcom/defs/product-defs/system/display-product-commonsys.mk" src="config/display-product-commonsys.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display" revision="44a483c8f967fbd82c5f8ea634499d5f6b9dcd00" upstream="refs/heads/display-sysintf.lnx.15.0.r14-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3">
+    <linkfile dest="vendor/qcom/defs/product-defs/system/display-product-system.mk" src="config/display-product-system.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-interfaces-product.mk" src="config/display-interfaces-product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/dpm-commonsys" path="vendor/qcom/opensource/commonsys/dpm" revision="9ff587035fddde3d21724b61f9807f347d69e03a" upstream="refs/heads/data-sys.lnx.16.0.r1-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_inc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/fm-commonsys" path="vendor/qcom/opensource/commonsys/fm" revision="a2ce6d9b16107b09a45717289b1022e7f0793a5c" upstream="refs/heads/fm-sys.lnx.15.0.r4-rel" groups="qc-common-sys,vsdk_inc_L0,vsdk_inc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/interfaces" path="vendor/qcom/opensource/interfaces" revision="cbf90c74f5433de78968600d0572bf7be2a53172" upstream="refs/heads/android-core-sysintf.lnx.16.0.r2-rel" groups="qc-common-sys-intf,vsdk_inc_L0,cyborg,vsdk_inc_L1,vsdk_inc_L2,vsdk_inc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/commonsys-intf/audio" path="vendor/qcom/opensource/commonsys-intf/audio" revision="ed621aaad6a16dd0f815e21e13f108203b135476" upstream="refs/heads/audio-sysintf.lnx.15.0.r11-rel" groups="qc-common-sys-intf,vsdk_inc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3" />
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/commonsys/wifi" path="vendor/qcom/opensource/commonsys/wifi" revision="d4a19a14e9ea9e763c9431bcb12d7ab217d19f13" upstream="refs/heads/wlan-mcc-service-sys.lnx.15.0.r2-rel" groups="qc-common-sys,vsdk_exc_L0,vsdk_exc_L1,vsdk_exc_L2,vsdk_exc_L3">
+    <linkfile dest="vendor/qcom/defs/product-defs/system/qtiwifi-ship-product-defs-system.mk" src="configs/qtiwifi-ship-product-defs-system.mk" />
+  </project>
+</manifest>

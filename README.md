@@ -20,15 +20,27 @@ build environment accepts the compact `<device>_<variant>` lunch format:
 ```bash
 source build/envsetup.sh
 lunch cupid_userdebug
-klee_build
+klee_build -j20
 ```
 
 Supported variants are `user`, `userdebug`, and `eng`. The default Android 17
-release configuration is `cp2a`. Builds are limited to at most 20 parallel jobs
-by `klee_build`.
+release configuration is `cp2a`. Klee does not impose a maximum parallel job
+count; users select it with `klee_build -jXX` or `mka bacon -jXX`.
 
 Hardware-specific device, kernel, and proprietary-vendor repositories are kept
 separate from the platform source repositories.
+
+Qualcomm platforms use optional manifests generated from pinned official
+CodeLinaro releases. For example, initialize SM8450/Waipio support with:
+
+```bash
+repo init -u https://github.com/KleeUI/android.git \
+    -b Klee-1.0 -m qcom/waipio.xml
+```
+
+See `qcom/README.md` for all supported Qualcomm platform manifests. Klee-owned
+integration code is independently implemented; AOSP and Qualcomm dependencies
+retain their real upstream history and attribution.
 
 Binary prebuilt projects remain pinned to their exact AOSP 17 revisions on
 `android.googlesource.com`. GitHub cannot store several of their original

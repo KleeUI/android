@@ -43,6 +43,12 @@ def parse_args():
         default=[],
         help="Additional project path prefix to import",
     )
+    parser.add_argument(
+        "--project-path",
+        action="append",
+        default=[],
+        help="Additional exact project path to import",
+    )
     parser.add_argument("--add-remote", action="store_true")
     return parser.parse_args()
 
@@ -74,6 +80,7 @@ def main():
         for project in base.findall("project")
     }
     path_prefixes = (*QCOM_PATH_PREFIXES, *args.path_prefix)
+    project_paths = set(args.project_path)
 
     output = ET.Element("manifest")
     output.append(
@@ -102,7 +109,7 @@ def main():
     for source in sources:
         for project in source.findall("project"):
             path = project.get("path", "")
-            if path.startswith(path_prefixes):
+            if path.startswith(path_prefixes) or path in project_paths:
                 projects_by_path[path] = project
     projects = list(projects_by_path.values())
 

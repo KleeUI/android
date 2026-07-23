@@ -83,7 +83,9 @@ def main():
             removed.add(existing_name)
 
     for project in projects:
-        output.append(copy.deepcopy(project))
+        pinned = copy.deepcopy(project)
+        pinned.set("clone-depth", "1")
+        output.append(pinned)
 
     indent(output)
     args.output.parent.mkdir(parents=True, exist_ok=True)

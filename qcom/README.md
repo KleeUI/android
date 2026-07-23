@@ -9,6 +9,11 @@ release manifests. Klee-specific integration and build logic is developed
 independently in Klee repositories; upstream Qualcomm code retains its original
 history, license, and attribution.
 
+Projects are shallow-synced at the exact release commit to keep large external
+histories off the local Android work disk. This does not rewrite any source or
+commit identity; full history remains available from the declared CodeLinaro
+remote.
+
 Initialize the required platform by selecting its manifest:
 
 ```bash

@@ -42,6 +42,13 @@ See `qcom/README.md` for all supported Qualcomm platform manifests. Klee-owned
 integration code is independently implemented; AOSP and Qualcomm dependencies
 retain their real upstream history and attribution.
 
+Before publishing a manifest change, validate that every declared source stays
+inside the AOSP, CodeLinaro, and KleeUI boundary:
+
+```bash
+python3 tools/check_manifest_sources.py
+```
+
 Binary prebuilt projects remain pinned to their exact AOSP 17 revisions on
 `android.googlesource.com`. GitHub cannot store several of their original
 histories without rewriting large files, so Klee deliberately keeps those

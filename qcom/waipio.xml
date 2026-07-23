@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <manifest>
-  <!-- Generated from CodeLinaro tags LA.VENDOR.15.4.1.r1-10300-WAIPIO.QSSI16.0, AU_TECHPACK_WLAN.LA.1.1.R1.00.00.00.000.027, AU_TECHPACK_BTFM.LA.1.0.R3.00.00.00.000.027, AU_TECHPACK_GRAPHICS.LA.15.1.R1.00.00.00.000.034, AU_LINUX_KERNEL.PLATFORM.4.0.R1.00.00.00.061.156. -->
+  <!-- Generated from CodeLinaro tags LA.VENDOR.15.4.1.r1-10300-WAIPIO.QSSI16.0, AU_TECHPACK_WLAN.LA.1.1.R1.00.00.00.000.027, AU_TECHPACK_BTFM.LA.1.0.R3.00.00.00.000.027, AU_TECHPACK_GRAPHICS.LA.15.1.R1.00.00.00.000.034, and KERNEL.PLATFORM.1.0.r1-09000-WAIPIO.0. -->
   <include name="qcom/qssi16.xml" />
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
   <remove-project name="android_hardware_qcom_wlan" optional="true" />
@@ -174,38 +174,18 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/btfm_techpack.mk" src="btfm_techpack.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/qcom/opensource/graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="0b08ff2cc8261bfd9d880353e615cea2880ce97f" upstream="refs/heads/gfx-kernel.lnx.15.0.r8-rel" clone-depth="1" />
-  <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="05601ad8685d332f0751f5d613fe8b97cc8321ae" upstream="refs/heads/kernel.lnx.6.6.r1-rel" clone-depth="1">
-    <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh" />
-    <linkfile dest="kernel_platform/build/build_utils.sh" src="build_utils.sh" />
-    <linkfile dest="kernel_platform/build/all-variants.sh" src="all-variants.sh" />
-    <linkfile dest="kernel_platform/build/brunch" src="brunch" />
-    <linkfile dest="kernel_platform/build/build_abl.sh" src="build_abl.sh" />
-    <linkfile dest="kernel_platform/build/build_module.sh" src="build_module.sh" />
-    <linkfile dest="kernel_platform/build/android/export_headers.py" src="android/export_headers.py" />
-    <linkfile dest="kernel_platform/build/android/merge_dtbs.py" src="android/merge_dtbs.py" />
-    <linkfile dest="kernel_platform/build/android/merge_dtbs.sh" src="android/merge_dtbs.sh" />
-    <linkfile dest="kernel_platform/build/android/prepare_vendor.sh" src="android/prepare_vendor.sh" />
-    <linkfile dest="kernel_platform/build/BUILD.bazel" src="BUILD.bazel" />
-    <linkfile dest="kernel_platform/build/build-tools/path" src="build-tools/path" />
-    <linkfile dest="kernel_platform/build/_setup_env.sh" src="_setup_env.sh" />
-    <linkfile dest="kernel_platform/build/multi-switcher.sh" src="multi-switcher.sh" />
-    <linkfile dest="kernel_platform/build/kleaf" src="kleaf" />
-    <linkfile dest="kernel_platform/build/abi" src="abi" />
-    <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis" />
-    <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh" />
-    <linkfile dest="kernel_platform/WORKSPACE" src="kleaf/bazel.WORKSPACE" />
-    <linkfile dest="kernel_platform/MODULE.bazel" src="kleaf/bzlmod/bazel.MODULE.bazel" />
-    <linkfile dest="kernel_platform/WORKSPACE.bzlmod" src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" />
+  <project remote="clo-la" name="kernel/build" path="kernel_platform/build" revision="56594101567799238a9947ac5bc006e1b0d8595a" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="1271e1568621fed2a67eadc94bffcbaa459c459b" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" groups="qki" clone-depth="1" />
+  <project remote="clo-la" name="kernel/msm-5.10" path="kernel_platform/msm-kernel" revision="154370a6e15b39c564691e60c08c7f698457c2ab" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1">
+    <linkfile dest="kernel_platform/common/build.config.msm.waipio" src="build.config.msm.waipio" />
+    <linkfile dest="kernel_platform/common/build.config.msm.waipio.tuivm" src="build.config.msm.waipio.tuivm" />
+    <linkfile dest="kernel_platform/common/build.config.msm.lahaina" src="build.config.msm.lahaina" />
   </project>
-  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="4132fcb429f26d8d66672e82efe8403eecc7b1e1" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" clone-depth="1">
-    <linkfile dest="kernel_platform/.source_date_epoch_dir" src="." />
-  </project>
-  <project remote="clo-la" name="kernel/common-modules/trusty" path="kernel_platform/common-modules/trusty" revision="b76f8570a1a3480a158f6bc69590dbf326a444d0" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" clone-depth="1" />
-  <project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="009bc8cbbca9d1019c2d4ef2652b68bfb491f7f7" upstream="refs/heads/kernel.lnx.6.6.r1-rel" clone-depth="1">
-    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py" />
-    <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions" />
-  </project>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/devicetree" path="kernel_platform/qcom/opensource/devicetree" revision="09b03e55160b87faf78d1bc66faebc3104a7c6fa" upstream="refs/heads/kernel.lnx.6.6.r1-rel" clone-depth="1">
-    <linkfile dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" src="." />
-  </project>
+  <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="10ab783184f77d3ea15bf666426a7138b0f62bfc" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel_platform/external/dtc" path="kernel_platform/external/dtc" revision="deb932d81061c472e8bb2648a409a456e6e84997" upstream="refs/heads/kernel.build.lnx.1.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel_platform/kernel/prebuilts/mainline/arm64" path="kernel_platform/kernel/prebuilts/mainline/arm64" revision="de12e10cfe8d67d5c0627069306fda939f52154a" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel_platform/prebuilts/build-tools" path="kernel_platform/prebuilts/build-tools" revision="846214bd11004546cd3fc2590c73c628fcd6778c" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="08410f46318f3f301b96ed058466ab0dde0b050b" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts-master/clang/host/linux-x86" revision="0fc3d01a780023469b7acc18c56a9cf5099a6d6c" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="c9f87ae369034b4942536a1c5bd62e4cd1d828e3" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
 </manifest>

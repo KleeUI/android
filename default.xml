@@ -1105,5 +1105,7 @@
   </project>
   <superproject name="platform/superproject" revision="android-17.0.0_r1" />
   <contactinfo bugurl="go/repo-bug" />
-  <project path="vendor/klee" name="android_vendor_klee" groups="pdk" />
+  <project path="vendor/klee" name="android_vendor_klee" groups="pdk">
+    <copyfile src="build/kernel_platform.find-ignore" dest="kernel_platform/.find-ignore" />
+  </project>
 </manifest>

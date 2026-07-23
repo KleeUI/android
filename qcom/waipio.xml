@@ -10,12 +10,14 @@
   </project>
   <project remote="clo-la" name="device/qcom/sepolicy_vndr" path="device/qcom/sepolicy_vndr" revision="54a082464707deb8ce6ad26a38c43bde92e63ced" upstream="refs/heads/sepolicy.vndr.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="clo-la" name="device/qcom/vendor-common" path="device/qcom/vendor-common" revision="706363c630b71cd05b5708f3afe582ec16703e85" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/hardware/qcom/audio-ar" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="7bcdf19e533dc4c4a370b3164eb8a96c4be4a2d9" upstream="refs/heads/audio-ahal-handset.lnx.10.0.r3-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_audio-hal_primary-hal" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_vendor_product.mk" src="configs/audio_vendor_product.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio-techpack.mk" src="configs/sun/audio-techpack.mk" />
   </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/audioreach/audioreach-graphservices" path="vendor/qcom/opensource/audioreach/graphservices" revision="d1a26ff4cb6152b0ea2e1891957fc62164d10f69" upstream="refs/heads/audioreach-graphservices" clone-depth="1" />
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/audioreach/audioreach-utils" path="vendor/qcom/opensource/audioreach/utils" revision="032a3eda72b7edb3b8e479640a02f6a2d85b3037" upstream="refs/heads/audioreach-audio-utils" clone-depth="1" />
   <project remote="clo-la" name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl" revision="2d29db1e6abbe22856cbadc60a151ed5c04e6133" upstream="refs/heads/android-core.lnx.15.0.r4-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="1099f11cb20c750336b9b9a28f4c544d62bce06c" upstream="refs/heads/display.lnx.7.4.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_hardware_qcom_display" path="hardware/qcom/display" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-product.mk" src="config/display-product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/display-board.mk" src="config/display-board.mk" />
   </project>
@@ -36,15 +38,15 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_dlkm_vendor_product.mk" src="dataipa_dlkm_vendor_product.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_binary_vendor_product.mk" src="dataipa_binary_vendor_product.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/opensource/display-core" path="vendor/qcom/opensource/display-core" revision="7c3dadd4f055318aca5ffc1ef88d2e255396f07c" upstream="refs/heads/display.lnx.7.4.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_display-core" path="vendor/qcom/opensource/display-core" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-core-product.mk" src="config/display-core-product.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/opensource/display-drivers" path="vendor/qcom/opensource/display-drivers" revision="739df189dc63d269f860b6c881d058b8534911df" upstream="refs/heads/display-kernel.lnx.1.3.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_display-drivers" path="vendor/qcom/opensource/display-drivers" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display_driver_product.mk" src="display_driver_product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/display_driver_board.mk" src="display_driver_board.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/opensource/display-intf" path="vendor/qcom/opensource/display-intf" revision="f6df4094c8059b7f3dc0f79fb365958b15c0c3f3" upstream="refs/heads/display.lnx.7.4.r1-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/opensource/mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="e50889e84c2f95da722d66f97076ab39a2f02db6" upstream="refs/heads/display-kernel.lnx.1.3.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/mm_driver_product.mk" src="mm_driver_product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/mm_driver_board.mk" src="mm_driver_board.mk" />
   </project>
@@ -57,7 +59,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" src="mmrm_kernel_product.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver/test" revision="b53832880c35e12da195e80784ed72880121bb4e" upstream="refs/heads/mmrm-kernel-waipio.lnx.1.4.r1-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/opensource/synx-kernel" path="vendor/qcom/opensource/synx-kernel" revision="811acb56cb0f98a355096ba0c1b52a09a95ff25a" upstream="refs/heads/synx-kernel.lnx.2.1.r3-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_synx-kernel" path="vendor/qcom/opensource/synx-kernel" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/synx_kernel_product.mk" src="synx_kernel_product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/synx_kernel_board.mk" src="synx_kernel_board.mk" />
   </project>
@@ -97,7 +99,7 @@
   <project remote="clo-la" name="platform/vendor/qcom-opensource/lights" path="vendor/qcom/opensource/lights" revision="1b0e9b390ff7a68923e07cc247677e14efe1994a" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/lights_product.mk" src="lights-vendor-product.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/location" path="vendor/qcom/opensource/location" revision="337351cbe0543c334ac4d6d249539e738c1e0df3" upstream="refs/heads/location.lnx.10.0.r4-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_location" path="vendor/qcom/opensource/location" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/gps-product-opensource.mk" src="gps_vendor_product.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/qcom-opensource/mmc-utils" path="vendor/qcom/opensource/mmc-utils" revision="523ee75dfed15d27e0228ddfda708dd06f0d99c7" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1" />
@@ -115,7 +117,7 @@
   <project remote="clo-la" name="platform/vendor/qcom-opensource/usb" path="vendor/qcom/opensource/usb" revision="c0f212819bdfbc51bf374a361a4bf3359f0e4ae6" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/usb_vendor_product.mk" src="vendor_product.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/vibrator" path="vendor/qcom/opensource/vibrator" revision="5f4250f6883fc847fa0e7e2323b57d28e2b31d01" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_vibrator" path="vendor/qcom/opensource/vibrator" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/vibrator_product.mk" src="vibrator-vendor-product.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wfd-commonsys" path="vendor/qcom/opensource/wfd" revision="73b76e39fc2cf73aaacdc5ae21da415dd1a45224" upstream="refs/heads/wfd-userspace.lnx.6.4.r1-rel" clone-depth="1" />
@@ -126,7 +128,7 @@
   <project remote="clo-la" name="platform/vendor/qcom/opensource/agm" path="vendor/qcom/opensource/agm" revision="00f22e419528db122a0d0e49c4c566c1e7074406" upstream="refs/heads/audio-platform-arintf.lnx.1.0.r96-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom/opensource/arpal-lx" path="vendor/qcom/opensource/pal" revision="22f8c33989a1946877ca2a35919386f22365d460" upstream="refs/heads/audio-platform-arintf.lnx.1.0.r96-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom/opensource/audio-devicetree" path="vendor/qcom/opensource/audio-devicetree" revision="9518632f61c256da61863df7cc337682dc9a7005" upstream="refs/heads/audio-kernel.lnx.6.6.r1-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/audio-kernel-ar" path="vendor/qcom/opensource/audio-kernel" revision="2de7164ecda4c4cf2774b02b51a6e88352574e05" upstream="refs/heads/audio-kernel.lnx.6.6.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_audio-kernel" path="vendor/qcom/opensource/audio-kernel" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" src="audio_kernel_product_board.mk" />
   </project>
@@ -161,7 +163,7 @@
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/platform" path="vendor/qcom/opensource/wlan/platform" revision="1258ec271714a0fd52c21a2f684799e6c153d8de" upstream="refs/heads/wlan-platform.lnx.2.0.r5-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="8b8b699f39fc0942b8ba636fe1a9149d92c5bfad" upstream="refs/heads/wlan-cmn.driver.lnx.2.0.9.r12-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="bc8da784983444aad28f7548c45880ef5d8df185" upstream="refs/heads/wlan-cld3.driver.lnx.2.0.9.r12-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/utils/sigma-dut" path="vendor/qcom/opensource/wlan/utils/sigma-dut" revision="16b06e2f747ec2db6a37996cd9d5225f54eb0e80" upstream="refs/heads/wlan-service-mcc.lnx.1.0.r67-rel" clone-depth="1" />
+  <project remote="klee" name="android_vendor_qcom_opensource_wlan_utils_sigma-dut" path="vendor/qcom/opensource/wlan/utils/sigma-dut" revision="refs/heads/Klee-1.0" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/wlan-devicetree" path="vendor/qcom/opensource/wlan/wlan-devicetree" revision="a2b0e0858c947f21ff9448312fbe4d0ce0b8fbbf" upstream="refs/heads/wlan-platform.lnx.2.0.r5-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom/wlan" path="device/qcom/wlan" revision="adc822c9870256991eeee71de9f838a13e1f6c66" upstream="refs/heads/wlan-service-mcc.lnx.1.0.r67-rel" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/wlan_techpack.mk" src="wlan_techpack.mk" />
@@ -181,6 +183,9 @@
     <linkfile dest="kernel_platform/common/build.config.msm.waipio" src="build.config.msm.waipio" />
     <linkfile dest="kernel_platform/common/build.config.msm.waipio.tuivm" src="build.config.msm.waipio.tuivm" />
     <linkfile dest="kernel_platform/common/build.config.msm.lahaina" src="build.config.msm.lahaina" />
+    <copyfile dest="kernel_build_tools/waipio/Android.bp" src="Android.bp" />
+    <copyfile dest="kernel_build_tools/waipio/scripts/headers_install.sh" src="scripts/headers_install.sh" />
+    <copyfile dest="kernel_build_tools/waipio/scripts/unifdef.c" src="scripts/unifdef.c" />
   </project>
   <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="10ab783184f77d3ea15bf666426a7138b0f62bfc" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
   <project remote="clo-la" name="kernel_platform/external/dtc" path="kernel_platform/external/dtc" revision="deb932d81061c472e8bb2648a409a456e6e84997" upstream="refs/heads/kernel.build.lnx.1.0.r1-rel" clone-depth="1" />

@@ -108,7 +108,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/power-vendor-product.mk" src="power-vendor-product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/power-vendor-board.mk" src="power-vendor-board.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/recovery-ext" path="vendor/qcom/opensource/recovery-ext" revision="3968efd123c015aa68678701ed9f7d2bf1c2e58c" upstream="refs/heads/android-core.lnx.15.0.r4-rel" clone-depth="1" />
+  <project remote="klee" name="android_vendor_qcom_opensource_recovery-ext" path="vendor/qcom/opensource/recovery-ext" revision="refs/heads/Klee-1.0" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/synx-devicetree" path="vendor/qcom/opensource/synx-devicetree" revision="7fee3fc26eb545cd50c33c32194276dac2ead8f9" upstream="refs/heads/synx-devicetree.lnx.2.0.r4-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/thermal-engine" path="vendor/qcom/opensource/thermal-engine" revision="3254395841b3d4dec4b309494dac256fe2c68aa4" upstream="refs/heads/android-core.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services" revision="63b043b2b34d0e7548bb5cc1fed4cc3ee5306f17" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1" />

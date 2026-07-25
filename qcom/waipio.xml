@@ -126,7 +126,7 @@
   <project remote="clo-la" name="platform/vendor/qcom/kalama" path="device/qcom/kalama" revision="65f833d74958b09def38ca91b102be4ad5f95a01" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom/lahaina" path="device/qcom/lahaina" revision="214800607d2cab75e01819b6faa0baa52ab301d9" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="klee" name="android_vendor_qcom_opensource_agm" path="vendor/qcom/opensource/agm" revision="refs/heads/Klee-1.0" />
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/arpal-lx" path="vendor/qcom/opensource/pal" revision="22f8c33989a1946877ca2a35919386f22365d460" upstream="refs/heads/audio-platform-arintf.lnx.1.0.r96-rel" clone-depth="1" />
+  <project remote="klee" name="android_vendor_qcom_opensource_pal" path="vendor/qcom/opensource/pal" revision="refs/heads/Klee-1.0" />
   <project remote="clo-la" name="platform/vendor/qcom/opensource/audio-devicetree" path="vendor/qcom/opensource/audio-devicetree" revision="9518632f61c256da61863df7cc337682dc9a7005" upstream="refs/heads/audio-kernel.lnx.6.6.r1-rel" clone-depth="1" />
   <project remote="klee" name="android_vendor_qcom_opensource_audio-kernel" path="vendor/qcom/opensource/audio-kernel" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk" />

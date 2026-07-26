@@ -171,7 +171,7 @@
   <project remote="clo-la" name="platform/vendor/qcom/opensource/bt-external" path="vendor/qcom/opensource/bt-external" revision="130d767d8cd28fef4fc43858f51f685c7420a386" upstream="refs/heads/bt-vndr.lnx.15.0.r3-rel" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/btfm_techpack.mk" src="btfm_techpack.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="0b08ff2cc8261bfd9d880353e615cea2880ce97f" upstream="refs/heads/gfx-kernel.lnx.15.0.r8-rel" clone-depth="1" />
+  <project remote="klee" name="android_vendor_qcom_opensource_graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="refs/heads/Klee-1.0" />
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build" revision="56594101567799238a9947ac5bc006e1b0d8595a" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1" />
   <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="1271e1568621fed2a67eadc94bffcbaa459c459b" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" groups="qki" clone-depth="1" />
   <project remote="clo-la" name="kernel/msm-5.10" path="kernel_platform/msm-kernel" revision="154370a6e15b39c564691e60c08c7f698457c2ab" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1">

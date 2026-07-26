@@ -29,7 +29,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/video-product.mk" src="product.mk" />
   </project>
   <project remote="clo-la" name="platform/hardware/qcom/thermal" path="vendor/qcom/opensource/thermal-hal" revision="cec5c885f99899d8cfd2c18d2cef4ccd9b3c29a1" upstream="refs/heads/ppat-corepower.lnx.15.0.r4-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/opensource/camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="1e9f1ad5bac8d2287d1ed74bd1f3542c89d7fe63" upstream="refs/heads/camera-kernel.lnx.5.6.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" src="board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" src="product.mk" />
   </project>

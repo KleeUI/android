@@ -136,7 +136,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_ext_dlkm_vendor_product.mk" src="datarmnet_ext_dlkm_vendor_product.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/qcom/opensource/dsp-devicetree" path="vendor/qcom/opensource/dsp-devicetree" revision="8674cc32fa64e81c9a8be71d010b7fe3173d9c43" upstream="refs/heads/dsp-kernel.lnx.2.0.r6-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="413a8bb23d4d4445166cc373106ca6139d1ebffe" upstream="refs/heads/dsp-kernel.lnx.2.0.r6-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/dsp_kernel_board.mk" src="dsp_kernel_board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/dsp_kernel_product.mk" src="dsp_kernel_product.mk" />
   </project>

@@ -64,7 +64,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/touch_driver_product.mk" src="touch_driver_product.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/opensource/video-devicetree" path="vendor/qcom/opensource/video-devicetree" revision="826297f320e53d05a820c123f5ef1a4785754e7a" upstream="refs/heads/video-kernel-waipio.lnx.1.4.r1-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" revision="ee559588510881155d85990a4eaa0ae94e988fc8" upstream="refs/heads/video-kernel-waipio.lnx.1.4.r1-rel" clone-depth="1">
+  <project remote="klee" name="android_vendor_qcom_opensource_video-driver" path="vendor/qcom/opensource/video-driver" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" src="video_kernel_product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" src="video_kernel_board.mk" />
   </project>

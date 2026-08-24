@@ -4,6 +4,7 @@
   <include name="qcom/qssi16.xml" />
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
   <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="refs/heads/Klee-1.0" />
+  <project remote="klee" name="proprietary_vendor_xiaomi_sm8450_qcril" path="vendor/xiaomi/sm8450-qcril" revision="refs/heads/Klee-1.0" />
   <project remote="klee" name="android_device_qcom_common" path="device/qcom/common" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
   </project>

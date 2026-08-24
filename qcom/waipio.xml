@@ -3,7 +3,6 @@
   <!-- Generated from CodeLinaro tags LA.VENDOR.15.4.1.r1-10300-WAIPIO.QSSI16.0, AU_TECHPACK_WLAN.LA.1.1.R1.00.00.00.000.027, AU_TECHPACK_BTFM.LA.1.0.R3.00.00.00.000.027, AU_TECHPACK_GRAPHICS.LA.15.1.R1.00.00.00.000.034, and KERNEL.PLATFORM.1.0.r1-09000-WAIPIO.0. -->
   <include name="qcom/qssi16.xml" />
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
-  <remove-project name="android_hardware_qcom_wlan" optional="true" />
   <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="refs/heads/Klee-1.0" />
   <project remote="klee" name="android_device_qcom_common" path="device/qcom/common" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
@@ -152,7 +151,6 @@
   <project remote="clo-la" name="platform/vendor/qcom/pineapple" path="device/qcom/pineapple" revision="8e082ed615f5c0fd993cc5eabe584d8c005dfafb" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom/sun" path="device/qcom/sun" revision="5a2220d188f3b1b9c966011c7a37b0f486b9e5ed" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom/taro" path="device/qcom/taro" revision="cd542666819b5d6fef8f3324264000c8f67208a6" upstream="refs/heads/qcom-devices.lnx.15.0.r4-rel" clone-depth="1" />
-  <project remote="clo-la" name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" revision="47b65281cfdb0fac06c719e1e460875ba8563aa4" upstream="refs/heads/wlan-aosp.lnx.15.0.r6-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/system/qcom" path="vendor/qcom/opensource/softap" revision="af6c12786bd66fb2d4f205d223085b7179020692" upstream="refs/heads/wlan-service-mcc.lnx.1.0.r67-rel" clone-depth="1" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="0ab817e9e3e1cf8e06251570943618a20a245a49" upstream="refs/heads/wlan-api.lnx.1.0.r252-rel" clone-depth="1" />
   <project remote="klee" name="android_vendor_qcom_opensource_wlan_platform" path="vendor/qcom/opensource/wlan/platform" revision="refs/heads/Klee-1.0" />

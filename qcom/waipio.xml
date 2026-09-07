@@ -3,7 +3,12 @@
   <!-- Generated from CodeLinaro tags LA.VENDOR.15.4.1.r1-10300-WAIPIO.QSSI16.0, AU_TECHPACK_WLAN.LA.1.1.R1.00.00.00.000.027, AU_TECHPACK_BTFM.LA.1.0.R3.00.00.00.000.027, AU_TECHPACK_GRAPHICS.LA.15.1.R1.00.00.00.000.034, and KERNEL.PLATFORM.1.0.r1-09000-WAIPIO.0. -->
   <include name="qcom/qssi16.xml" />
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
-  <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="refs/heads/Klee-1.0" />
+  <remove-project name="android_hardware_qcom_wlan" optional="true" />
+  <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="refs/heads/Klee-1.0">
+    <!-- Cupid owns the complete source DTS input. Link it into the inline
+         Waipio kernel instead of allowing a stock DTB/DTBO fallback. -->
+    <linkfile src="kernel/dts" dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" />
+  </project>
   <project remote="klee" name="proprietary_vendor_xiaomi_sm8450_qcril" path="vendor/xiaomi/sm8450-qcril" revision="refs/heads/Klee-1.0" />
   <project remote="klee" name="android_device_qcom_common" path="device/qcom/common" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />

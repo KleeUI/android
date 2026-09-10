@@ -40,7 +40,6 @@
   <project remote="klee" name="android_vendor_qcom_opensource_dataipa" path="vendor/qcom/opensource/dataipa" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/dataipa_dlkm_vendor_board.mk" src="dataipa_dlkm_vendor_board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_dlkm_vendor_product.mk" src="dataipa_dlkm_vendor_product.mk" />
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_binary_vendor_product.mk" src="dataipa_binary_vendor_product.mk" />
   </project>
   <project remote="klee" name="android_vendor_qcom_opensource_display-core" path="vendor/qcom/opensource/display-core" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-core-product.mk" src="config/display-core-product.mk" />

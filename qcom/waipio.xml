@@ -175,11 +175,9 @@
   </project>
   <project remote="klee" name="android_vendor_qcom_opensource_graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="refs/heads/Klee-1.0" />
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build" revision="56594101567799238a9947ac5bc006e1b0d8595a" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1" />
-  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="1271e1568621fed2a67eadc94bffcbaa459c459b" upstream="refs/heads/ks-kernel.lnx.1.0.r1-rel" groups="qki" clone-depth="1" />
   <project remote="clo-la" name="kernel/msm-5.10" path="kernel_platform/msm-kernel" revision="154370a6e15b39c564691e60c08c7f698457c2ab" upstream="refs/heads/kernel.lnx.5.10.r1-rel" clone-depth="1">
-    <linkfile dest="kernel_platform/common/build.config.msm.waipio" src="build.config.msm.waipio" />
-    <linkfile dest="kernel_platform/common/build.config.msm.waipio.tuivm" src="build.config.msm.waipio.tuivm" />
-    <linkfile dest="kernel_platform/common/build.config.msm.lahaina" src="build.config.msm.lahaina" />
+    <!-- The Waipio mixed build uses this source as its common tree too. -->
+    <linkfile dest="kernel_platform/common" src="." />
     <copyfile dest="kernel_build_tools/waipio/Android.bp" src="Android.bp" />
     <copyfile dest="kernel_build_tools/waipio/scripts/headers_install.sh" src="scripts/headers_install.sh" />
     <copyfile dest="kernel_build_tools/waipio/scripts/unifdef.c" src="scripts/unifdef.c" />

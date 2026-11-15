@@ -19,8 +19,15 @@ Initialize the required platform by selecting its manifest:
 ```bash
 repo init -u https://github.com/KleeUI/android.git \
     -b Klee-1.0 -m qcom/waipio.xml
-repo sync -c --force-sync --no-clone-bundle --no-tags -j4
+repo sync -c --no-clone-bundle --no-tags -j4
 ```
+
+For Xiaomi 12 (`cupid`), follow the
+[usage and build guide](https://github.com/KleeUI/android_device_xiaomi_cupid/blob/Klee-1.0/docs/BUILDING.zh-CN.md).
+The public manifest supplies platform and kernel sources, but complete
+`vendor/xiaomi/cupid` and `vendor/xiaomi/sm8450-common` proprietary inputs must
+be prepared separately. A successful sync alone is not enough to build the
+device. Save local modifications before updating an existing checkout.
 
 Available manifests:
 

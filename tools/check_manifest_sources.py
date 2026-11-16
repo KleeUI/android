@@ -17,6 +17,7 @@ MANIFESTS = (ROOT / "default.xml", *sorted((ROOT / "qcom").glob("*.xml")))
 ALLOWED_REMOTES = {
     "aosp": "https://android.googlesource.com",
     "clo-la": "https://git.codelinaro.org/clo/la",
+    "clo-le": "https://git.codelinaro.org/clo/le",
     "klee": "https://github.com/KleeUI",
 }
 PINNED_REVISION = re.compile(r"[0-9a-f]{40}")
@@ -50,7 +51,7 @@ def main():
                     f"unapproved remote {remote!r}"
                 )
 
-            if remote == "clo-la":
+            if remote in {"clo-la", "clo-le"}:
                 revision = project.get("revision", "")
                 if not PINNED_REVISION.fullmatch(revision):
                     failures += fail(

@@ -3,6 +3,7 @@
   <!-- Generated from CodeLinaro tags LA.VENDOR.15.4.1.r1-10300-WAIPIO.QSSI16.0, AU_TECHPACK_WLAN.LA.1.1.R1.00.00.00.000.027, AU_TECHPACK_BTFM.LA.1.0.R3.00.00.00.000.027, AU_TECHPACK_GRAPHICS.LA.15.1.R1.00.00.00.000.034, and KERNEL.PLATFORM.1.0.r1-09000-WAIPIO.0. -->
   <include name="qcom/qssi16.xml" />
   <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la" />
+  <remote fetch="https://git.codelinaro.org/clo/le" name="clo-le" />
   <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="refs/heads/Klee-1.0">
     <!-- Cupid owns the complete source DTS input. Link it into the inline
          Waipio kernel instead of allowing a stock DTB/DTBO fallback. -->
@@ -14,12 +15,12 @@
   </project>
   <project remote="clo-la" name="device/qcom/sepolicy_vndr" path="device/qcom/sepolicy_vndr" revision="54a082464707deb8ce6ad26a38c43bde92e63ced" upstream="refs/heads/sepolicy.vndr.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="klee" name="android_device_qcom_vendor-common" path="device/qcom/vendor-common" revision="refs/heads/Klee-1.0" />
-  <project remote="klee" name="android_vendor_qcom_opensource_audio-hal_primary-hal" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="refs/heads/Klee-1.0">
+  <project remote="klee" name="android_vendor_qcom_opensource_audio-hal_primary-hal" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="b52265ce15c1d42926554c862eb27c00156f57bc" upstream="refs/heads/Klee-1.0" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_vendor_product.mk" src="configs/audio_vendor_product.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio-techpack.mk" src="configs/sun/audio-techpack.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/audioreach/audioreach-graphservices" path="vendor/qcom/opensource/audioreach/graphservices" revision="d1a26ff4cb6152b0ea2e1891957fc62164d10f69" upstream="refs/heads/audioreach-graphservices" clone-depth="1" />
-  <project remote="clo-la" name="platform/vendor/qcom/opensource/audioreach/audioreach-utils" path="vendor/qcom/opensource/audioreach/utils" revision="032a3eda72b7edb3b8e479640a02f6a2d85b3037" upstream="refs/heads/audioreach-audio-utils" clone-depth="1" />
+  <project remote="klee" name="android_vendor_qcom_opensource_audioreach_graphservices" path="vendor/qcom/opensource/audioreach/graphservices" revision="89596f56e0cf4843c7b5b294a824858f87640b34" upstream="refs/heads/Klee-1.0" clone-depth="1" />
+  <project remote="klee" name="android_vendor_qcom_opensource_audioreach_utils" path="vendor/qcom/opensource/audioreach/utils" revision="add54e3bf705a03bbe6c2dcce96b66af9a042e67" upstream="refs/heads/Klee-1.0" clone-depth="1" />
   <project remote="clo-la" name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl" revision="2d29db1e6abbe22856cbadc60a151ed5c04e6133" upstream="refs/heads/android-core.lnx.15.0.r4-rel" clone-depth="1" />
   <project remote="klee" name="android_hardware_qcom_display" path="hardware/qcom/display" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-product.mk" src="config/display-product.mk" />
@@ -33,6 +34,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/video-product.mk" src="product.mk" />
   </project>
   <project remote="clo-la" name="platform/hardware/qcom/thermal" path="vendor/qcom/opensource/thermal-hal" revision="cec5c885f99899d8cfd2c18d2cef4ccd9b3c29a1" upstream="refs/heads/ppat-corepower.lnx.15.0.r4-rel" clone-depth="1" />
+  <project remote="clo-le" name="platform/system/memory/libvmmem" path="vendor/qcom/opensource/libvmmem" revision="e7931707b2ad31595b55bbadce0d2e773caaed05" clone-depth="1" />
   <project remote="klee" name="android_vendor_qcom_opensource_camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="refs/heads/Klee-1.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" src="board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" src="product.mk" />
@@ -98,7 +100,7 @@
   <project remote="clo-la" name="platform/vendor/qcom-opensource/lights" path="vendor/qcom/opensource/lights" revision="1b0e9b390ff7a68923e07cc247677e14efe1994a" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/lights_product.mk" src="lights-vendor-product.mk" />
   </project>
-  <project remote="klee" name="android_vendor_qcom_opensource_location" path="vendor/qcom/opensource/location" revision="refs/heads/Klee-1.0">
+  <project remote="klee" name="android_vendor_qcom_opensource_location" path="vendor/qcom/opensource/location" revision="9ab2a038ac2b0f540b6fabc4e7e6c6bec722474d" upstream="refs/heads/Klee-1.0" clone-depth="1">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/gps-product-opensource.mk" src="gps_vendor_product.mk" />
   </project>
   <project remote="clo-la" name="platform/vendor/qcom-opensource/mmc-utils" path="vendor/qcom/opensource/mmc-utils" revision="523ee75dfed15d27e0228ddfda708dd06f0d99c7" upstream="refs/heads/core-technologies.lnx.15.0.r7-rel" clone-depth="1" />

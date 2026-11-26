@@ -6,11 +6,11 @@
   <remote fetch="https://git.codelinaro.org/clo/le" name="clo-le" />
   <remove-project name="platform/system/core" path="system/core" />
   <project remote="klee" name="android_system_core" path="system/core" revision="d60f6c92147581460a29ba9407337fd4c23d6dc3" upstream="refs/heads/Klee-1.0" groups="pdk" clone-depth="1" />
-  <extend-project name="android_vendor_klee" path="vendor/klee" revision="87de31622ec2c1dd539dfa70972c7e749e6a98b6" upstream="refs/heads/Klee-1.0" />
+  <extend-project name="android_vendor_klee" path="vendor/klee" revision="88dc5aed65d73735e139d8873e3c46da095a03db" upstream="refs/heads/Klee-1.0" />
   <extend-project name="android_frameworks_av" path="frameworks/av" revision="10b6f33ecee358d51970f4b34d5ef15f9dbd5a0b" upstream="refs/heads/Klee-1.0" />
   <extend-project name="android_packages_apps_Camera2" path="packages/apps/Camera2" revision="d71851f7c380aa8291d1446f7bb884216b48a1a0" upstream="refs/heads/Klee-1.0" />
   <project remote="klee" name="android_packages_apps_KleeCamera" path="packages/apps/KleeCamera" revision="a93954ab46b0ea0b0955cfb07be1feaf44b31685" upstream="refs/heads/Klee-1.0" />
-  <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="632a0a357d07ce3d645f1ac98e7c7af9789c82f8" upstream="refs/heads/Klee-1.0">
+  <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="e2479aa345423744f90480239a8d0aeaa1904a9f" upstream="refs/heads/Klee-1.0">
     <!-- Cupid owns the complete source DTS input. Link it into the inline
          Waipio kernel instead of allowing a stock DTB/DTBO fallback. -->
     <linkfile src="kernel/dts" dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" />

@@ -12,7 +12,6 @@
   <extend-project name="android_frameworks_av" path="frameworks/av" revision="10b6f33ecee358d51970f4b34d5ef15f9dbd5a0b" upstream="refs/heads/Klee-1.0" />
   <extend-project name="android_packages_apps_Settings" path="packages/apps/Settings" revision="7666bd4747b035f9a70b3cd8fa557130154fba92" upstream="refs/heads/Klee-1.0" />
   <project remote="klee" name="android_packages_apps_KleeCamera" path="packages/apps/KleeCamera" revision="a93954ab46b0ea0b0955cfb07be1feaf44b31685" upstream="refs/heads/Klee-1.0" />
-  <project remote="klee" name="android_packages_apps_KleeGallery" path="packages/apps/KleeGallery" revision="64b77071e361fac79742c6af4f05a509ea4f4a11" upstream="refs/heads/Klee-1.0" />
   <project remote="klee" name="android_device_xiaomi_cupid" path="device/xiaomi/cupid" revision="f564c6d3d8dfda67fc84276732fc600028edeccf" upstream="refs/heads/Klee-1.0">
     <!-- Cupid owns the complete source DTS input. Link it into the inline
          Waipio kernel instead of allowing a stock DTB/DTBO fallback. -->
